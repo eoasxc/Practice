@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{border: 3px solid #73ad21;}
+        .img1{float: right;}
+        .fix{overflow: auto;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>이미지가 박스 영역을 벗어남</p>
+    <div>
+        <img class="img1" src="amongus.jpg" width="140" height="140">
+        이미지가 오른쪽 정렬로 되어 있는데, 박스영역을 벗어났습니다.
+    </div>
+    <p style="clear: right;">overflow속성으로 해결</p>
+    <div class="fix">
+        <img class="img1" src="amongus.jpg" width="140" height="140">
+        이미지가 오른쪽 정렬로 되어 있는데, 박스영역을 벗어났습니다.
+    </div>
+
+</body>
+</html>
