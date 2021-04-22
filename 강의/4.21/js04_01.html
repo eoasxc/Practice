@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = 100;
+        var b = 200;
+        console.log(a + b);
+
+        a = 200;
+        b = 300;
+        console.log(a + b);
+
+        function func() {
+            var a  = 100;
+            var b  = 200;
+            console.log(a + b);
+        }
+
+        func();
+
+        console.log("\n----------------------\n")
+
+        function func1(a) {
+            console.log(a);
+        }
+
+        function func2(a, b) {
+            console.log(a + b);
+        }
+
+        func();
+        func1(10);
+        func2(10);
+        func2(20);
+        func2(10,20);
+
+        console.log("\n----------------------\n")
+
+
+        function plus1() {
+            var a = 10;
+            var b = 20;
+            var c = a + b;
+            console.log(a + b);
+        }
+
+        function plus2(a, b) {
+            var c = a + b;
+            console.log(c);
+        }
+
+        function plus3() {
+            var a = 10;
+            var b = 20;
+            var c = a + b;
+            return c;
+        }
+
+        function plus4(a, b) {
+            var c = a + b;
+            return c;
+        }  
+        // 1번 함수 형태, 매개변수와 반환값이 모두 없음, 결과값이 고정됨, 결과값 외부 사용 불가
+        // 2번 함수 형태, 매개변수가 존재하고, 반환값 없음, 매개변수에 따라 결과값 변경, 결과값 외부 사용 불가
+        // 3번 함수 형태, 매개변수가 없음, 반환값 존재, 결과값 고정, 결과값 외부 사용 가능
+        // 4번 함수 형태, 매개변수 존재, 반환값 존재, 매개변수에 따라 결과값 변경, 결과값 외부 사용 가능
+
+
+        //지역 변수, 전역 변수
+        //지역 변수 : 특정 코드블럭 내에서만 접근하여 사용할 수 있는 변수
+         //var타입, let타입에 따라서 범위가 달라짐
+         //var타입은 함수 기준의 지역 변수
+         //let타입은 코드블럭 기준의 지역 변수
+        //전역 변수 : 프로그램 (현재 웹페이지)전체에서 접근하여 사용할 수 있는 변수
+
+        var carName = "말리부";
+
+        function funcLocal() {
+            var carSize = "중형";
+            console.log(carName);
+            console.log(carSize);
+        }
+
+        funcLocal();
+
+        console.log("----- 함수 밖에서 호출 -----");
+        console.log(carName);
+        console.log(carSize);
+        
+        console.log("-----var와 let의 차이----")
+        function funcLocal2() {
+            var value1 = "value1";
+
+            if (true) {
+                var value2 = "value2"; 
+                let value3 = "value3";
+            }
+
+            console.log(value1);
+            console.log(value2);
+            console.log(value3);
+        }
+
+        funcLocal2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
