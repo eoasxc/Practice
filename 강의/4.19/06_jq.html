@@ -9,11 +9,11 @@
     <script>
         var n = 0;
         $(document).ready(function(){
-            $("div.out").mouseenter(function(){
-                $("p:first",this).text("마우스포인터 들어옴");
+            $("div.out").mouseover(function(){
+                $(".out",this).text("마우스포인터 들어옴");
             });
             $("div.out").mouseleave(function(){
-                $("p:first",this).text("마우스포인터 나감");
+                $(".out",this).text("마우스포인터 나감");
             });
             $("div.out").mousedown(function(){
                 $("p:last",this).text("메시지 사라짐");
@@ -25,6 +25,13 @@
     </script>
     <style>
         div.out{
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000000;
+            text-align: center;
+            background-color: pink;
+        }
+        div.out2{
             width: 200px;
             height: 100px;
             border: 1px solid #000000;
